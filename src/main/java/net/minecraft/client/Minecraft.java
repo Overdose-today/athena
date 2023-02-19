@@ -184,6 +184,7 @@ import org.lwjgl.opengl.GLContext;
 import org.lwjgl.opengl.OpenGLException;
 import org.lwjgl.opengl.PixelFormat;
 import org.lwjgl.util.glu.GLU;
+import overdose.today.athena.Athena;
 
 public class Minecraft implements IThreadListener, IPlayerUsage
 {
@@ -559,6 +560,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         this.effectRenderer = new EffectRenderer(this.theWorld, this.renderEngine);
         this.checkGLError("Post startup");
         this.ingameGUI = new GuiIngame(this);
+
+        Athena.getSingleton().initialization();
 
         if (this.serverName != null)
         {

@@ -13,6 +13,9 @@ public class Athena {
         return singleton;
     }
 
+    /**
+     * Method which will be initializing the client, this is called in 'Minecraft.java' ~line 564
+     */
     public void initialization() {
         System.out.println("Athena is initializing...");
     }
